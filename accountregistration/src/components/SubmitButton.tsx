@@ -7,5 +7,5 @@ interface ISubmitButtonProps {
 export const SubmitButton = ({
   buttonText,
 }: ISubmitButtonProps): ReactElement => {
-  return <button type="submit"> {buttonText} </button>;
+  return <button className="submitbutton" type="submit"> {buttonText} </button>;
 };

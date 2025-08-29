@@ -12,7 +12,7 @@ export const Form = ({
 }: IFormProps): ReactElement => {
   return (
     <>
-      <form>
+      <form className="form">
         {inputFields}
         <SubmitButton buttonText={submitButtonText} />
       </form>
