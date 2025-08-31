@@ -12,12 +12,9 @@ function App() {
     setPassword(value);
     if (value.length < 8 && value.length > 0) {
       setPasswordError("Password must be at least 8 characters long");
-      
-    } 
-    else if (value != confirmPassword && confirmPassword.length > 0) {
+    } else if (value != confirmPassword && confirmPassword.length > 0) {
       setPasswordError("Passwords do not match");
-    }
-    else {
+    } else {
       setPasswordError("");
     }
   };
@@ -28,7 +25,7 @@ function App() {
     const value = e.target.value;
     setConfirmPassword(value);
     if (value !== password && value.length > 0) {
-      setPasswordError("Passwords do not match"); 
+      setPasswordError("Passwords do not match");
     } else {
       setPasswordError("");
     }
@@ -56,6 +53,7 @@ function App() {
 
   return (
     <>
+      <h1>Registration Form</h1>
       <Form inputFields={fields} submitButtonText="Send" />
       {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
     </>
