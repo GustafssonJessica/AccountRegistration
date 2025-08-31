@@ -31,6 +31,8 @@ function App() {
     }
   };
 
+  const isPasswordValid = password.length >= 8 && password === confirmPassword;
+
   const fields = [
     <InputField type="text" placeholder="Name" id="name" />,
     <InputField type="username" placeholder="Username" id="username" />,
@@ -54,7 +56,7 @@ function App() {
   return (
     <>
       <h1>Registration Form</h1>
-      <Form inputFields={fields} submitButtonText="Send" />
+      <Form inputFields={fields} submitButtonText="Send" disabled = {!isPasswordValid} />
       {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
     </>
   );

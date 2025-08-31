@@ -2,10 +2,11 @@ import type { ReactElement } from "react";
 
 interface ISubmitButtonProps {
   buttonText: string;
+  disabled?: boolean
 }
 
 export const SubmitButton = ({
-  buttonText,
+  buttonText, disabled
 }: ISubmitButtonProps): ReactElement => {
-  return <button className="submitbutton" type="submit"> {buttonText} </button>;
+  return <button className="submitbutton" disabled = {disabled} type="submit"> {buttonText}   </button>;
 };
